@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 require_relative "lib/match_all/version"
+require_relative "lib/match_all"
 
 Gem::Specification.new do |spec|
+  include MatchAll
+
   spec.name = "match_all"
   spec.version = MatchAll::VERSION
   spec.authors = ["Jeff Lange"]
@@ -35,17 +38,18 @@ Gem::Specification.new do |spec|
     This is especially useful if, e.g. you want to interrogate the matches to find
     out their starting/ending indexes within the string, etc
   DESC
-  # spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage = "https://github.com/jeffdlange/match_all"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://github.com/jeffdlange/match_all"
 
-  # spec.metadata["homepage_uri"] = spec.homepage
-  # spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/jeffdlange/match_all"
+  spec.metadata["changelog_uri"] = "https://github.com/jeffdlange/match_all/blob/main/CHANGELOG.md"
 
   spec.add_development_dependency "rspec", "~> 3.2"
+  spec.add_development_dependency "pry", "~> 0.13.1"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

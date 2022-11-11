@@ -7,6 +7,8 @@ gemspec
 
 gem "rake", "~> 13.0"
 
-gem "rspec", "~> 3.2"
-
-gem "standard", "~> 1.3"
+group :development, :test do
+  gem "standard", "~> 1.3"
+  gem "rspec", "~> 3.2"
+  gem "pry", "~> 0.13.1"
+end

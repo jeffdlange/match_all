@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    match_all (0.1.0)
+    match_all (0.1.2)
 
 GEM
   remote: https://rubygems.org/
